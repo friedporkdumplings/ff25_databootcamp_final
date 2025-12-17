@@ -4,7 +4,7 @@
 
 **Course:** Data Bootcamp – Final Project
 
-**Data Source:** balldontlie API (/v1/stats)
+**Data Source:** balldontlie API (Endpoint: stats)
 
 **Target:** next_pts (points scored in the player’s next game)
 
