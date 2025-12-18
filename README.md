@@ -100,13 +100,15 @@ Error analysis is conducted at both the player and outcome levels. Average error
 
 *(Table of most under-predicted / over-predicted players by player.id)*
 
+A naive baseline such as predicting a player’s recent 5-game average would typically yield a similar or worse RMSE, while XGBoost provides a structured way to incorporate multiple contextual signals beyond simple averaging.
+
 ---
 
 ## Conclusion and Next Steps
 
 All in all, this project features a complete end-to-end predictive workflow to predict NBA players' next-game points; it includes API data collection, data cleaning, exploratory analysis, feature engineering, time-aware evaluation, and regression-based prediction of next-game scoring. Results indicate that recent performance and playing-time signals are strong predictors, while the most challenging cases involve high-variance players and extreme scoring outcomes.
 
-We do want to highlight that, in terms of limitations, our current model relies on box score–derived statistics and short-term rolling trends. While these may be effective for capturing recent form, they do not fully represent the game-level context that influences scoring. After taking into consideration the other endpoints and signals avalibale on balldontlie API, we believe that there are several that could be implemented and utlized in a future model for more accurate and stable player next-game point predictions. For future improvements, some additional signals that can be incorporated from the API are: betting spreads and totals to proxy expected pace and competitiveness, implied win probabilities to capture game flow and late-game usage, and season-level scoring baselines to stabilize predictions when recent windows are noisy—could further reduce mid-range prediction error and improve overall robustness in future iterations.
+We do want to highlight that, in terms of limitations, our current model relies on box score–derived statistics and short-term rolling trends. While these may be effective for capturing recent form, they do not fully represent the game-level context that influences scoring. After taking into consideration the other endpoints and signals avalibale on balldontlie API, we believe that there are several that could be implemented and utlized in a future model for more accurate and stable player next-game point predictions. For future improvements, some additional signals that can be incorporated from the API are: betting spreads and totals to proxy expected pace and competitiveness, implied win probabilities to capture game flow and late-game usage, and season-level scoring baselines to stabilize predictions when recent windows are noisy—could further reduce mid-range prediction error and improve overall robustness in future iterations. 
 
 ---
 
